@@ -19,7 +19,7 @@ try:
 
     search_box.clear()
 
-    search_box.send_keys("bass + guitar")
+    search_box.send_keys("גיטרה + בס")
 
     search_box.send_keys(Keys.ENTER)
 
