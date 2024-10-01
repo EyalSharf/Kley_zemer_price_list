@@ -37,7 +37,7 @@ sheet = workbook.active
 sheet.cell(row=1, column=1).value = "Description"
 sheet.cell(row=1, column=2).value = "Price"
 
-for index, search_result in enumerate(search_results, start=2):  # Start from row 2 to account for headers
+for index, search_result in enumerate(search_results, start=2):
     try:
         description_element = search_result.find_element(By.XPATH, ".//div[@class='description']/h2/div[2]")
         description = description_element.text
@@ -50,7 +50,7 @@ for index, search_result in enumerate(search_results, start=2):  # Start from ro
 
     except NoSuchElementException:
         print(f"Search result {index-1} may not have the expected elements.")
-        continue  # Skip to the next search result
+        continue
 
 workbook.save("C:\\Users\\shomrat\\PycharmProjects\\pythonProject\\bass_guitar_list.xlsx")
 
